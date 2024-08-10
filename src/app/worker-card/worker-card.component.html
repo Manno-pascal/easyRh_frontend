@@ -1,0 +1,19 @@
+<div class="workerCard">
+  <ul>
+    <img [src]="workerCard.imageUrl" [alt]="workerCard.firstname + workerCard.lastname">
+    <li>Prénom : {{ workerCard.firstname }}</li>
+    <li>Nom : {{ workerCard.lastname }}</li>
+    <li>Poste : {{ workerCard.position }}</li>
+    <li>Status : {{ workerCard.positionType }}</li>
+    <li>
+      Nombre d'avertissement : {{ workerCard.warning }}
+      <button (click)="onAddWarning()">Blamer</button>
+    </li>
+    @if (workerCard.unevaleuraleatoire){
+      <li>
+        la valeur aléatoire : {{workerCard.unevaleuraleatoire}}
+      </li>
+    }
+  </ul>
+</div>
+
