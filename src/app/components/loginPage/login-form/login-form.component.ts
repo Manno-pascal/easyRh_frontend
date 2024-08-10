@@ -1,18 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {FormsModule, NgForm, ReactiveFormsModule} from "@angular/forms";
-import {LoginService} from "../services/login.service";
+import {LoginService} from "../../../services/login.service";
 import {Observable} from "rxjs";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
   imports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOptimizedImage
   ],
   templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.scss'
+  styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent implements OnInit{
   email: String | undefined;
@@ -26,11 +28,10 @@ export class LoginFormComponent implements OnInit{
   }
 
   onSubmitForm(form: NgForm): void {
-    console.log(form)
     this.userToken$ = this.loginService.getUserToken(form.value.email, form.value.password);
     this.userToken$.subscribe(
-      (token: any) => {
-        console.log(token);
+      (response: any) => {
+        this.onContinue()
       }
 
     )
