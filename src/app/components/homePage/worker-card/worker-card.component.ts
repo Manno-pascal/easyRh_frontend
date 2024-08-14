@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {WorkerCard} from "../../../models/worker_card";
+
 
 @Component({
   selector: 'app-worker-card',
@@ -9,12 +9,9 @@ import {WorkerCard} from "../../../models/worker_card";
   styleUrl: './worker-card.component.css'
 })
 export class WorkerCardComponent implements OnInit{
-  @Input() workerCard!: WorkerCard;
+  @Input() worker!: Worker;
 
   ngOnInit() {
-  }
-  onAddWarning(): void{
-
-    this.workerCard.warned ? this.workerCard.removeWarning():this.workerCard.addWarning();
+    console.log(this.worker);
   }
 }

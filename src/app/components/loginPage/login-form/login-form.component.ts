@@ -16,24 +16,35 @@ import {NgOptimizedImage} from "@angular/common";
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })
-export class LoginFormComponent implements OnInit{
+export class LoginFormComponent implements OnInit {
   email: String | undefined;
   password: String | undefined;
-  userToken$: Observable<object> | undefined;
-  constructor(private router: Router, private loginService: LoginService) { }
-  ngOnInit() {  }
+  error: String | undefined;
+
+  constructor(private router: Router, private loginService: LoginService) {
+  }
+
+  ngOnInit() {
+  }
 
   onContinue(): void {
     this.router.navigateByUrl("home")
   }
 
   onSubmitForm(form: NgForm): void {
-    this.userToken$ = this.loginService.getUserToken(form.value.email, form.value.password);
-    this.userToken$.subscribe(
-      (response: any) => {
-        this.onContinue()
+    this.loginService.setUserToken(form.value.email, form.value.password).subscribe(
+      {
+        next: res => {
+          localStorage.setItem('bearer', res.bearer)
+          this.onContinue()
+        },
+        error: err => {
+          this.error = err.error
+        },
+        complete: () => {
+          console.log("HTTP request completed.")
+        }
       }
-
-    )
+    );
   }
 }

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {WorkerCard} from "../../../models/worker_card";
 import {WorkerCardComponent} from "../worker-card/worker-card.component";
 import {WorkerCardsService} from '../../../services/worker-cards.service'
 
@@ -15,9 +14,20 @@ import {WorkerCardsService} from '../../../services/worker-cards.service'
 export class WorkerCardsListComponent implements OnInit {
   constructor(private workerCardsService:WorkerCardsService) {
   }
-  workers!: WorkerCard[];
+  workers!: Array<Worker>;
   ngOnInit(): void {
-    this.workers = this.workerCardsService.getWorkerCards();
-    this.workers[1].setUnevaleuraleatoire("yolo")
+    this.workerCardsService.getWorkerCards().subscribe(
+      {
+        next: res => {
+          console.log(res)
+          this.workers = res
+          console.log(this.workers)
+          console.log(this.workers[0].lastname)
+        },
+        error: err => {
+          console.log("HTTP error.",err)
+        },
+      }
+    );
   }
 }

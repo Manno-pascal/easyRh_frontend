@@ -1,19 +1,20 @@
-<div class="workerCard">
-  <ul>
-    <img [src]="workerCard.imageUrl" [alt]="workerCard.firstname + workerCard.lastname">
-    <li>Prénom : {{ workerCard.firstname }}</li>
-    <li>Nom : {{ workerCard.lastname }}</li>
-    <li>Poste : {{ workerCard.position }}</li>
-    <li>Status : {{ workerCard.positionType }}</li>
-    <li>
-      Nombre d'avertissement : {{ workerCard.warning }}
-      <button (click)="onAddWarning()">Blamer</button>
-    </li>
-    @if (workerCard.unevaleuraleatoire){
-      <li>
-        la valeur aléatoire : {{workerCard.unevaleuraleatoire}}
-      </li>
-    }
-  </ul>
-</div>
+<!--<div class="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900workerCard">-->
+<!--&lt;!&ndash;  <img [src]="workerCard.imageUrl" alt="" class="object-cover object-center rounded-full h-72 dark:bg-gray-500">&ndash;&gt;-->
+<!--  <div class="mt-6 mb-2">-->
+<!--    <span class="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">{{ worker["position"] }}</span>-->
+<!--    <h2 class="text-xl font-semibold tracking-wide">{{ worker["firstname"] }} {{ worker["lastname"] }}</h2>-->
+<!--  </div>-->
+<!--  <ul>-->
+<!--    <li>Status : {{ worker["position"] }}</li>-->
+<!--    <li>-->
+<!--      Nombre d'avertissement : {{ worker["warning"] }}-->
+<!--      <button>Blamer</button>-->
+<!--    </li>-->
+<!--    @if (worker["comment"]) {-->
+<!--      <li>-->
+<!--        la valeur aléatoire : {{ worker["comment"] }}-->
+<!--      </li>-->
+<!--    }-->
+<!--  </ul>-->
+<!--</div>-->
 
