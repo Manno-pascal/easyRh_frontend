@@ -1,6 +1,6 @@
 import {Company} from "./company";
 
-export class Worker {
+export class Collaborator {
   constructor(
     public id: number,
     public firstname: string,

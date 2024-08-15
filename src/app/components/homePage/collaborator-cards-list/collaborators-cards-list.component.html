@@ -1,0 +1,8 @@
+
+<div class="flex p-5">
+  @for (collaborator of collaborators; track collaborator.lastname){
+    <app-collaborator-card class="m-2" [collaborator]="collaborator"/>
+  }
+</div>
+
+

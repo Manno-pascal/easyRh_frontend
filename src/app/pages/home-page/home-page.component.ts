@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {WorkerCardsListComponent} from "../../components/homePage/worker-cards-list/workers-cards-list.component";
+import {
+  CollaboratorsCardsListComponent,
+} from "../../components/homePage/collaborator-cards-list/collaborators-cards-list.component";
 import {HeaderComponent} from "../../components/shared/header/header.component";
 import {FooterComponent} from "../../components/shared/footer/footer.component";
 
@@ -7,7 +9,7 @@ import {FooterComponent} from "../../components/shared/footer/footer.component";
   selector: 'app-home-page',
   standalone: true,
   imports: [
-    WorkerCardsListComponent,
+    CollaboratorsCardsListComponent,
     HeaderComponent,
     FooterComponent
   ],

@@ -1,0 +1,26 @@
+
+
+<div class="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900workerCard">
+<!--  <img [src]="workerCard.imageUrl" alt="" class="object-cover object-center rounded-full h-72 dark:bg-gray-500">-->
+  <div class="mt-6 mb-2">
+    <span class="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">{{ collaborator.positionType }}</span>
+    <h2 class="text-xl font-semibold tracking-wide">{{ collaborator.firstname }} {{ collaborator.lastname }}</h2>
+  </div>
+  <ul>
+    <li>Status : {{ collaborator.position }}</li>
+    <li>
+      Nombre d'avertissement : {{ collaborator.warning }}
+      <button type="button" class="px-1 m-1 font-semibold border rounded dark:border-gray-800 dark:text-gray-800 hover:border-orange-500 hover:text-orange-400">Blamer</button>
+    </li>
+    @if (collaborator.comment) {
+      <li>
+        la valeur aléatoire : {{ collaborator.comment }}
+      </li>
+    }
+  </ul>
+  <div class="flex">
+    <button (click)="onAboutCard()" type="button" class="px-8 py-3 m-1 font-semibold border rounded dark:border-gray-800 dark:text-gray-800 hover:border-orange-500 hover:text-orange-400">Voir</button>
+    <button (click)="onDeleteCard()" type="button" class="px-8 py-3 m-1  font-semibold border rounded dark:border-gray-800 dark:text-gray-800 hover:border-orange-500 hover:text-orange-400">Supprimer</button>
+  </div>
+</div>
+
