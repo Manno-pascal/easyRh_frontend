@@ -1,16 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {
-  CollaboratorsCardsListComponent
-} from "../../components/homePage/collaborator-cards-list/collaborators-cards-list.component";
-import {FooterComponent} from "../../components/shared/footer/footer.component";
-import {HeaderComponent} from "../../components/shared/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
+import {HeaderComponent} from "../../components/header/header.component";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-about-page',
   standalone: true,
   imports: [
-    CollaboratorsCardsListComponent,
     FooterComponent,
     HeaderComponent
   ],

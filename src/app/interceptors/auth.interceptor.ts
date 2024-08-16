@@ -1,7 +1,6 @@
-import {HttpEvent, HttpHandler, HttpHandlerFn, HttpHeaders, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {HttpEvent, HttpHandlerFn,HttpRequest} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Router} from "@angular/router";
-import {LoginService} from "../services/login.service";
+
 
 
 export function AuthInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {

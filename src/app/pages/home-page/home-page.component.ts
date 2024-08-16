@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {
   CollaboratorsCardsListComponent,
-} from "../../components/homePage/collaborator-cards-list/collaborators-cards-list.component";
-import {HeaderComponent} from "../../components/shared/header/header.component";
-import {FooterComponent} from "../../components/shared/footer/footer.component";
+} from "./components/collaborator-cards-list/collaborators-cards-list.component";
+import {HeaderComponent} from "../../components/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-home-page',

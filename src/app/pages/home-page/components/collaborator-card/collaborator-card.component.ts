@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Collaborator} from "../../../models/collaborator";
+import {Collaborator} from "../../../../models/collaborator";
 import {Router} from "@angular/router";
-import {LoginService} from "../../../services/login.service";
+
 
 
 @Component({

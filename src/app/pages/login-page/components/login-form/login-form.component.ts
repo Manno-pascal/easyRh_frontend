@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {FormsModule, NgForm, ReactiveFormsModule} from "@angular/forms";
-import {LoginService} from "../../../services/login.service";
-import {Observable} from "rxjs";
+import {LoginService} from "../../../../services/login.service";
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({

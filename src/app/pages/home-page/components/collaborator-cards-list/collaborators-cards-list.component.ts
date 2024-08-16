@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CollaboratorCardComponent} from "../collaborator-card/collaborator-card.component";
-import {CollaboratorCardsService} from '../../../services/collaborator-cards.service'
-import {Collaborator} from "../../../models/collaborator";
+import {CollaboratorCardsService} from '../../../../services/collaborator-cards.service'
+import {Collaborator} from "../../../../models/collaborator";
 
 @Component({
   selector: 'app-collaborators-cards-list',
