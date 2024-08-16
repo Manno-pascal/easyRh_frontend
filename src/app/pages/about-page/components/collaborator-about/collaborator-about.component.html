@@ -1,1 +1,144 @@
-<p>collaborator-about works!</p>
+<div class="w-full flex justify-center">
+  <div class="overflow-hidden divide-y rounded shadow-sm bg-gray-100 divide-gray-300 p-6 m-6 w-1/2">
+    <h2 class=" mb-6 text-xl font-semibold">Modifier un collaborateur</h2>
+    <form [formGroup]="workerForm" class="grid grid-cols-1 gap-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="firstname">Prénom</label>
+          <input type="text" id="firstname" name="firstname"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="firstname">
+        </div>
+
+        <div>
+          <label for="lastname">Nom</label>
+          <input type="text" id="lastname" name="lastname"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="lastname">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="position">Poste</label>
+          <input type="text" id="position" name="position"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="position">
+        </div>
+
+        <div>
+          <label for="positionType">Type de poste</label>
+          <input type="text" id="positionType" name="positionType"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="positionType">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="gender">Genre</label>
+          <input type="text" id="gender" name="gender"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="gender">
+        </div>
+
+        <div>
+          <label for="age">Âge</label>
+          <input type="number" id="age" name="age"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="age">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="phoneNumber">Numéro de téléphone</label>
+          <input type="text" id="phoneNumber" name="phoneNumber"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="phoneNumber">
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="email">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label for="address">Adresse</label>
+          <input type="text" id="address" name="address"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="address">
+        </div>
+
+        <div>
+          <label for="zip">Code postal</label>
+          <input type="text" id="zip" name="zip"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="zip">
+        </div>
+
+        <div>
+          <label for="city">Ville</label>
+          <input type="text" id="city" name="city"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="city">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="dayOff">Jour de repos</label>
+          <input type="text" id="dayOff" name="dayOff"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="dayOff">
+        </div>
+
+        <div>
+          <label for="warning">Avertissement</label>
+          <input type="text" id="warning" name="warning"
+                 class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="warning">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label for="isCeo">CEO</label>
+          <input type="checkbox" id="isCeo" name="isCeo"
+                 class=" ml-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="isCeo">
+        </div>
+
+        <div>
+          <label for="isRh">RH</label>
+          <input type="checkbox" id="isRh" name="isRh"
+                 class="ml-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="isRh">
+        </div>
+
+        <div>
+          <label for="isRqth">RQTH</label>
+          <input type="checkbox" id="isRqth" name="isRqth"
+                 class="ml-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                 formControlName="isRqth">
+        </div>
+      </div>
+
+      <div class="col-span-1">
+        <label for="comment">Commentaire</label>
+        <textarea id="comment" name="comment"
+                  class="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                  formControlName="comment"></textarea>
+      </div>
+      <button _ngcontent-ng-c2504043602="" type="submit"
+              class="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-orange-500">Modifier
+      </button>
+    </form>
+  </div>
+
+</div>

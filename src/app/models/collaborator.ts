@@ -17,6 +17,8 @@ export class Collaborator {
     public address: string,
     public city: string,
     public ceo: boolean,
+    public rh: boolean,
+    public rqth: boolean,
     public country: string,
     public zip: string,
     public company: Company
