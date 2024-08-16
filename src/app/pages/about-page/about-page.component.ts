@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {FooterComponent} from "../../components/footer/footer.component";
 import {HeaderComponent} from "../../components/header/header.component";
 import {ActivatedRoute} from "@angular/router";
+import {CollaboratorAboutComponent} from "./components/collaborator-about/collaborator-about.component";
 
 @Component({
   selector: 'app-about-page',
   standalone: true,
   imports: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CollaboratorAboutComponent
   ],
   templateUrl: './about-page.component.html',
   styleUrl: './about-page.component.css'

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CollaboratorCardComponent} from "../collaborator-card/collaborator-card.component";
-import {CollaboratorCardsService} from '../../../../services/collaborator-cards.service'
+import {CollaboratorService} from '../../../../services/collaborator.service'
 import {Collaborator} from "../../../../models/collaborator";
 
 @Component({
@@ -13,11 +13,11 @@ import {Collaborator} from "../../../../models/collaborator";
   styleUrl: './collaborators-cards-list.component.css'
 })
 export class CollaboratorsCardsListComponent implements OnInit {
-  constructor(private collaboratorCardsService:CollaboratorCardsService) {
+  constructor(private collaboratorCardsService:CollaboratorService) {
   }
   collaborators!: Array<Collaborator>;
   ngOnInit(): void {
-    this.collaboratorCardsService.getCollaboratorCards().subscribe(
+    this.collaboratorCardsService.getCollaboratorsList().subscribe(
       {
         next: res => {
           this.collaborators = res
