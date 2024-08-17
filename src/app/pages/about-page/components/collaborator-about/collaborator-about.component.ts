@@ -59,6 +59,7 @@ export class CollaboratorAboutComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.workerForm.value);
+    this.collaborator = this.workerForm.value;
+    console.log(this.collaborator);
   }
 }
